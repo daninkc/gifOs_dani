@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/gifOs_dani/styles/captura.css">
+    <link rel="stylesheet" href="styles/captura.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
-<body>
+<body onload="addto();">
 
     <header>
         <p>¡Bienvenidos/as a Guifos.com! ------Donde los gifs están.////// Número de visitas: <span
@@ -17,7 +17,7 @@
     </header>
 
     <section class="topbar">
-        <img class="flecha" src="/gifOs_dani/assets/arrow.svg" alt="flecha hacia atrás"><img src="/gifOs_dani/assets/gifOF_logo.png" alt="GuifOs logo">
+        <img class="flecha" src="assets/arrow.svg" alt="flecha hacia atrás"><img src="assets/gifOF_logo.png" alt="GuifOs logo">
     </section>
 
 
@@ -42,7 +42,7 @@
                 ¿Quieres comenzar a crear tu guifo ahora?
             </p>
             <span class="loadWindowButtons"><button class="cancel">Cancelar</button>
-            <button class="start">Comenzar</button></span>
+            <button class="start" id="btn-start-recording">Comenzar</button></span>
         </section>
 
 <br><br><br><br>
@@ -53,14 +53,14 @@
         <section class="loadingWindows">
             <div class="loadWindowTitle">
                 <span><p id="titlePlaceholder">Un chequeo antes de empezar</p></span>
-                <span><img src="/gifOs_dani/assets/button3.svg" alt="botón de cierre"></span>
+                <span><img src="assets/button3.svg" alt="botón de cierre"></span>
             </div>
-            <div class="previewContainer"><img class="preview" src="/gifOs_dani/assets/hedgie.jpg" alt="hedgie"></div>
+            <div class="previewContainer"><video id="isavideo" ></video></div>
 
             <!-- Parte inferior de ventana -->
 
-            <span class="captura"><button class="cameraIcon"><img
-                src="/gifOs_dani/assets/camera.svg" alt="camera button"></button><button class="capturar">Capturar</button></span>
+            <span class="captura"><button class="cameraIcon"><img 
+                src="assets/camera.svg" alt="camera button"></button><button id="btn-start" class="capturar">Capturar</button></span>
         </section>
 
 <br><br><br>
@@ -68,14 +68,14 @@
         <section class="loadingWindows">
             <div class="loadWindowTitle">
                 <span><p id="titlePlaceholder">Capturando tu Guifo</p></span>
-                <span><img src="/gifOs_dani/assets/button3.svg" alt="botón de cierre"></span>
+                <span><img src="assets/button3.svg" alt="botón de cierre"></span>
             </div>
-            <div class="previewContainer"><img class="preview" src="/gifOs_dani/assets/hedgie.jpg" alt="hedgie"></div>
+            <div class="previewContainer"><img class="preview" id="secondpreview"></div>
 
             <!-- Parte inferior de ventana -->
 
             <span class="recording"><button class="recordingIcon"><img
-                src="/gifOs_dani/assets/recording.svg" alt="recording button"></button><button class="record">Listo</button></span>
+                src="assets/recording.svg" alt="recording button"></button><button class="record" id="btn-stop-recording">Listo</button></span>
         </section>
 
 <br><br><br>
@@ -83,16 +83,16 @@
 <section class="loadingWindows">
     <div class="loadWindowTitle">
         <span><p id="titlePlaceholder">Vista previa</p></span>
-        <span><img src="/gifOs_dani/assets/button3.svg" alt="botón de cierre"></span>
+        <span><img src="assets/button3.svg" alt="botón de cierre"></span>
     </div>
-    <div class="previewContainer"><img class="preview" src="/gifOs_dani/assets/hedgie.jpg" alt="hedgie"></div>
+    <div class="previewContainer"><img class="preview" id="thirdpreview"></div>
 
     <!-- Parte inferior de ventana -->
 <span class="windowFooter">
 
     <span class="timerandloader">
     <span class="timer"><p>00:00:00</p></span>
-    <div class="fwdButton"><img src="/gifOs_dani/assets/forward.svg" alt="forward button"></div>
+    <div class="fwdButton"><img src="assets/forward.svg" alt="forward button"></div>
     <div class="progressBar">
         <div id="activeRectangle"></div>
         <div id="activeRectangle"></div>
@@ -116,7 +116,7 @@
 
     <span class="rptuploadbuttons">
     <button class="repetir">Repetir captura</button>
-    <button class="subir">Subir Guifo</button>
+    <button class="subir"  id="btn-upload">Subir Guifo</button>
     </span>
 
 </span>
@@ -129,9 +129,9 @@
         <section class="loadingWindows">
             <div class="loadWindowTitle">
                 <span><p id="titlePlaceholder">Capturando tu Guifo</p></span>
-                <span><img src="/gifOs_dani/assets/button3.svg" alt="botón de cierre"></span>
+                <span><img src="assets/button3.svg" alt="botón de cierre"></span>
             </div>
-            <div class="emptyContainer"> <img src="/gifOs_dani/assets/globe_img.png" alt="Globo terráqueo">
+            <div class="emptyContainer"> <img src="assets/globe_img.png" alt="Globo terráqueo">
                 <p>Estamos subiendo tu Guifo</p>
                 <div class="uploadingBar">
                     <div id="activeRectangle"></div>
@@ -176,12 +176,12 @@
        <section class="finalLoadWindow">
         <div class="loadWindowTitle">
             <span><p class="subido" id="titlePlaceholder">Guifo subido con éxito</p></span>
-            <span><img src="/gifOs_dani/assets/button3.svg" alt="botón de cierre"></span>
+            <span><img src="assets/button3.svg" alt="botón de cierre"></span>
         </div>
     <!-- <span><img src="/assets/window img.png" alt="Window Image"></span> -->
   <div class="imageAndButtons">
   
-    <div class="smallPreviewContainer"><img class="smallPreview" src="/gifOs_dani/assets/hedgie.jpg" alt="hedgie"></div>
+    <div class="smallPreviewContainer"><img class="smallPreview" src="assets/hedgie.jpg" alt="hedgie"></div>
 
     <div class="rightButtons">
         <p><b>Guifo creado con éxito</b></p>
@@ -202,50 +202,18 @@
         <div>
             <p class="tendenciasdehoy">Mis Guifos</p>
         </div>
-        <div class="tendenciasGifs">
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
 
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-
-
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <span class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </span>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-            <div class="gifBox2">
-                <img class="gif2" src="/assets/tenor (1).gif" alt="">
-            </div>
-
+        <div class="mygifs" id="here">
         </div>
+
     </section>
 
 </body>
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/R
+ecordRTC.js" type="text/javascript"></script>
+
+<script src="/script/captura.Js"></script>
 
 </html>

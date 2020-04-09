@@ -125,7 +125,7 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     margin-bottom: 16px;
 }
 
-.tendenciasGifs {
+.mygifs {
 display: grid;
 grid-template-columns: auto auto auto auto;
 padding-right: 140px;
@@ -133,7 +133,7 @@ align-content: space-around;
 justify-content: space-between;
 }
 
-.gifBox2 {
+.obtgifbox {
     width: 298px;
     height: 298px;
     margin-bottom: 16px;
@@ -142,12 +142,12 @@ box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     z-index: 0;
 }
 
-.gif2 {
-    width: 298px;
-    height: 298px;
+.obtgif {
+    width: 291px;
+    height: 291px;
     background: #E6E6E6;
     z-index: 1;
-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; 
+box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 margin: 4px 4px 4px 4px;
 }
 
@@ -184,6 +184,7 @@ padding-bottom: 38px;
  .preview {
      height: 468px;
      width: 100%;
+     z-index: 999;
  }
 
  .previewContainer {
