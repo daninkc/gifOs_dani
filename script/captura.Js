@@ -7,7 +7,7 @@ console.log("Hello World!");
     var arr = [];
     var divfornew = document.getElementById('here');
     var myvideo = document.getElementById('isavideo');
-  
+    var downloadref = document.getElementById('btn-download');
   
   
   
@@ -30,9 +30,11 @@ console.log("Hello World!");
     function stopRecordingCallback() {
   
     console.log('Stopped recording');
-  
-    thirdimage.src = URL.createObjectURL(recorder.getBlob());
-  
+    var sourceSet = URL.createObjectURL(recorder.getBlob());
+    thirdimage.src = sourceSet;
+    downloadref.href = sourceSet;
+    console.log(sourceSet);
+
     let form = new FormData();
     form.append('file', recorder.getBlob(), 'myGif.gif');
   
@@ -74,6 +76,7 @@ console.log("Hello World!");
         imagen2.classList.add('obtgif');
         obtainedbox.appendChild(imagen2);                     //la adjunto al div
         imagen2.src = urlmygif;                               //le asigno source
+        console.log(urlmygif);
         
   
   
@@ -101,6 +104,7 @@ console.log("Hello World!");
         quality: 10,
         width: 360,
         hidden: 240,
+        
         onGifRecordingStarted: function() {
         },
   
@@ -152,3 +156,5 @@ console.log("Hello World!");
         imagen2.src = urlmygif;
   
         }) }
+
+        

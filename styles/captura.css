@@ -187,6 +187,14 @@ padding-bottom: 38px;
      z-index: 999;
  }
 
+ .previewContainer video {
+     position: relative;
+     top: 0;
+     left: 0;
+     max-height: 468px;
+     width: auto;
+ }
+
  .previewContainer {
     height: 468px;
     background: #E6E6E6;
@@ -475,3 +483,27 @@ margin-bottom: 14px;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     padding-top: 1px;
 }
+
+/* #window1 {
+    display: block;
+}
+
+#window2 {
+    display: none;
+}
+
+#window3 {
+    display: none;
+}
+
+#window4 {
+    display: none;
+}
+
+#window5 {
+    display: none;
+}
+
+#window6 {
+    display: none;
+} */

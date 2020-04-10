@@ -17,185 +17,163 @@
     </header>
 
     <section class="topbar">
-        <img class="flecha" src="assets/arrow.svg" alt="flecha hacia atrás"><img src="assets/gifOF_logo.png" alt="GuifOs logo">
+        <img class="flecha" src="assets/arrow.svg" alt="flecha hacia atrás"><img src="assets/gifOF_logo.png"
+            alt="GuifOs logo">
     </section>
 
 
-
-        <!-- Ventana inicial de carga de Guifos -->
-        <section id="primera" class="initialLoadWindow">
-                <div class="windowTitle">
-                    Crear Guifos
-                </div>
-            <!-- <span><img src="/assets/window img.png" alt="Window Image"></span> -->
-            <h4><b>Aquí podrás crear tus propios Guifos</b></h4>
-               <p>Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los
-                pasos para crear tu guifo son: <br><br>
-                1) Dar permisos de acceso a la cámara (solo por el tiempo de uso)
-                <br><br>
-                2) Capturar tu momento guifo
-                <br><br>
-                3) Revisar el momento
-                <br><br>
-                4) Listo para subir y compartir!
-                <br><br>
-                ¿Quieres comenzar a crear tu guifo ahora?
-            </p>
-            <span class="loadWindowButtons"><button class="cancel">Cancelar</button>
-            <button class="start" id="btn-start-recording">Comenzar</button></span>
-        </section>
-
-<br><br><br><br>
-
-        <!-- Ventanas de carga -->
-        <!-- Títulos de ventanas -->
-
-        <section class="loadingWindows">
-            <div class="loadWindowTitle">
-                <span><p id="titlePlaceholder">Un chequeo antes de empezar</p></span>
-                <span><img src="assets/button3.svg" alt="botón de cierre"></span>
-            </div>
-            <div class="previewContainer"><video id="isavideo" ></video></div>
-
-            <!-- Parte inferior de ventana -->
-
-            <span class="captura"><button class="cameraIcon"><img 
-                src="assets/camera.svg" alt="camera button"></button><button id="btn-start" class="capturar">Capturar</button></span>
-        </section>
-
-<br><br><br>
-
-        <section class="loadingWindows">
-            <div class="loadWindowTitle">
-                <span><p id="titlePlaceholder">Capturando tu Guifo</p></span>
-                <span><img src="assets/button3.svg" alt="botón de cierre"></span>
-            </div>
-            <div class="previewContainer"><img class="preview" id="secondpreview"></div>
-
-            <!-- Parte inferior de ventana -->
-
-            <span class="recording"><button class="recordingIcon"><img
-                src="assets/recording.svg" alt="recording button"></button><button class="record" id="btn-stop-recording">Listo</button></span>
-        </section>
-
-<br><br><br>
-
-<section class="loadingWindows">
-    <div class="loadWindowTitle">
-        <span><p id="titlePlaceholder">Vista previa</p></span>
-        <span><img src="assets/button3.svg" alt="botón de cierre"></span>
-    </div>
-    <div class="previewContainer"><img class="preview" id="thirdpreview"></div>
-
-    <!-- Parte inferior de ventana -->
-<span class="windowFooter">
-
-    <span class="timerandloader">
-    <span class="timer"><p>00:00:00</p></span>
-    <div class="fwdButton"><img src="assets/forward.svg" alt="forward button"></div>
-    <div class="progressBar">
-        <div id="activeRectangle"></div>
-        <div id="activeRectangle"></div>
-        <div id="activeRectangle"></div>
-        <div id="activeRectangle"></div>
-        <div id="activeRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-        <div id="inactiveRectangle"></div>
-    </div>
-</span>
-
-    <span class="rptuploadbuttons">
-    <button class="repetir">Repetir captura</button>
-    <button class="subir"  id="btn-upload">Subir Guifo</button>
-    </span>
-
-</span>
-
-</section>
-
-
-<br><br><br>
-
-        <section class="loadingWindows">
-            <div class="loadWindowTitle">
-                <span><p id="titlePlaceholder">Capturando tu Guifo</p></span>
-                <span><img src="assets/button3.svg" alt="botón de cierre"></span>
-            </div>
-            <div class="emptyContainer"> <img src="assets/globe_img.png" alt="Globo terráqueo">
-                <p>Estamos subiendo tu Guifo</p>
-                <div class="uploadingBar">
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                </div>
-                <p class="remaining">Tiempo restante: <span>38 años</span> algunos minutos</p>
-
-
-            </div>
-
-            <!-- Parte inferior de ventana -->
-            <div class="cancelButton">
-            <button class="cancel">Cancelar</button>
+    <section id="window1" class="initialLoadWindow">
+        <div class="windowTitle">
+            Crear Guifos
         </div>
-        </section>
+        <h4><b>Aquí podrás crear tus propios Guifos</b></h4>
+        <p>Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los
+            pasos para crear tu guifo son: <br><br>
+            1) Dar permisos de acceso a la cámara (solo por el tiempo de uso)
+            <br><br>
+            2) Capturar tu momento guifo
+            <br><br>
+            3) Revisar el momento
+            <br><br>
+            4) Listo para subir y compartir!
+            <br><br>
+            ¿Quieres comenzar a crear tu guifo ahora?
+        </p>
+        <span class="loadWindowButtons"><button id="btn-cancel" class="cancel">Cancelar</button>
+            <button class="start" id="btn-start" onclick="captureCamera();" >Comenzar</button></span>
+    </section>
 
-<br><br><br>
 
-
-       <!-- Ventana inicial de carga de Guifos -->
-       <section class="finalLoadWindow">
+    <section class="loadingWindows" id="window2">
         <div class="loadWindowTitle">
-            <span><p class="subido" id="titlePlaceholder">Guifo subido con éxito</p></span>
+            <span>
+                <p id="titlePlaceholder">Un chequeo antes de empezar</p>
+            </span>
             <span><img src="assets/button3.svg" alt="botón de cierre"></span>
         </div>
-    <!-- <span><img src="/assets/window img.png" alt="Window Image"></span> -->
-  <div class="imageAndButtons">
-  
-    <div class="smallPreviewContainer"><img class="smallPreview" src="assets/hedgie.jpg" alt="hedgie"></div>
+        <div class="previewContainer2">
+            <video id="isavideo"></video>
+        </div>
+        <span class="captura"><button class="cameraIcon"><img src="assets/camera.svg"
+                    alt="camera button"></button><button id="btn-start-recording" onclick="showHide2(); startRecording();" class="capturar">Capturar</button></span>
+    </section>
 
-    <div class="rightButtons">
-        <p><b>Guifo creado con éxito</b></p>
-        <button class="copiarEnlace">Copiar enlace Guifo</button>
-        <button class="descargarGuifo">Descargar Guifo</button>
-    </div>
 
-</div>
+    <section class="loadingWindows" id="window3">
+        <div class="loadWindowTitle">
+            <span>
+                <p id="titlePlaceholder">Capturando tu Guifo</p>
+            </span>
+            <span><img src="assets/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="previewContainer"><img class="preview" id="secondpreview"></div>
+        <span class="recording"><button class="recordingIcon"><img src="assets/recording.svg"
+                    alt="recording button"></button><button class="record" id="btn-stop-recording">Listo</button></span>
+    </section>
 
-    <span class="readyButton">
-    <button class="ready">Listo</button></span>
 
-    
-</section>
+    <section class="loadingWindows" id="window4">
+        <div class="loadWindowTitle">
+            <span>
+                <p id="titlePlaceholder">Vista previa</p>
+            </span>
+            <span><img src="assets/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="previewContainer"><img class="preview" id="thirdpreview"></div>
+        <span class="windowFooter">
+            <span class="timerandloader">
+                <span class="timer">
+                    <p>00:00:00</p>
+                </span>
+                <div class="fwdButton"><img src="assets/forward.svg" alt="forward button"></div>
+                <div class="progressBar">
+                    <div id="activeRectangle"></div>
+                    <div id="activeRectangle"></div>
+                    <div id="activeRectangle"></div>
+                    <div id="activeRectangle"></div>
+                    <div id="activeRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                    <div id="inactiveRectangle"></div>
+                </div>
+            </span>
+            <span class="rptuploadbuttons">
+                <button class="repetir">Repetir captura</button>
+                <button class="subir" id="btn-upload">Subir Guifo</button>
+            </span>
+        </span>
+    </section>
+
+
+    <section class="loadingWindows" id="window5">
+        <div class="loadWindowTitle">
+            <span>
+                <p id="titlePlaceholder">Capturando tu Guifo</p>
+            </span>
+            <span><img src="assets/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="emptyContainer"> <img src="assets/globe_img.png" alt="Globo terráqueo">
+            <p>Estamos subiendo tu Guifo</p>
+            <div class="uploadingBar">
+                <div id="activeRectangle"></div>
+                <div id="activeRectangle"></div>
+                <div id="activeRectangle"></div>
+                <div id="activeRectangle"></div>
+                <div id="activeRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+                <div id="inactiveRectangle"></div>
+            </div>
+            <p class="remaining">Tiempo restante: <span>38 años</span> algunos minutos</p>
+        </div>
+        <div class="cancelButton">
+            <button class="cancel">Cancelar</button>
+        </div>
+    </section>
+
+
+    <section class="finalLoadWindow" id="window6">
+        <div class="loadWindowTitle">
+            <span>
+                <p class="subido" id="titlePlaceholder">Guifo subido con éxito</p>
+            </span>
+            <span><img src="assets/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="imageAndButtons">
+            <div class="smallPreviewContainer"><img class="smallPreview" src="assets/hedgie.jpg" alt="hedgie"></div>
+            <div class="rightButtons">
+                <p><b>Guifo creado con éxito</b></p>
+                <button class="copiarEnlace">Copiar enlace Guifo</button>
+                <a class="descargarGuifo" id="btn-download" download="mygif.gif">Descargar Guifo</button>
+            </div>
+        </div>
+        <span class="readyButton">
+            <button class="ready">Listo</button></span>
+    </section>
 
 
     <section class="tendencias">
@@ -210,8 +188,7 @@
 
 </body>
 
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/R
+<script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/R
 ecordRTC.js" type="text/javascript"></script>
 
 <script src="/script/captura.Js"></script>
