@@ -40,7 +40,7 @@
             ¿Quieres comenzar a crear tu guifo ahora?
         </p>
         <span class="loadWindowButtons"><button id="btn-cancel" class="cancel">Cancelar</button>
-            <button class="start" id="btn-start" onclick="captureCamera();" >Comenzar</button></span>
+            <button class="start" id="btn-start" onclick="hideShow1(); captureCamera();" >Comenzar</button></span>
     </section>
 
 
@@ -55,7 +55,7 @@
             <video id="isavideo"></video>
         </div>
         <span class="captura"><button class="cameraIcon"><img src="assets/camera.svg"
-                    alt="camera button"></button><button id="btn-start-recording" onclick="showHide2(); startRecording();" class="capturar">Capturar</button></span>
+                    alt="camera button"></button><button id="btn-start-recording" onclick="hideShow2(); startRecordingNow();" class="capturar">Capturar</button></span>
     </section>
 
 
@@ -68,7 +68,7 @@
         </div>
         <div class="previewContainer"><img class="preview" id="secondpreview"></div>
         <span class="recording"><button class="recordingIcon"><img src="assets/recording.svg"
-                    alt="recording button"></button><button class="record" id="btn-stop-recording">Listo</button></span>
+                    alt="recording button"></button><button class="record" id="btn-stop-recording" onclick="hideShow3(); stopRecordingNow();">Listo</button></span>
     </section>
 
 

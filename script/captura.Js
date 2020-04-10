@@ -8,9 +8,34 @@ console.log("Hello World!");
     var divfornew = document.getElementById('here');
     var myvideo = document.getElementById('isavideo');
     var downloadref = document.getElementById('btn-download');
-  
-  
-  
+    var first = document.getElementById("window1");
+    var second = document.getElementById("window2");
+    var third = document.getElementById("window3");
+    var fourth = document.getElementById("window4");
+    var fifth = document.getElementById("window5");
+    var sixth = document.getElementById("window6");
+
+    function hideShow1() {
+      first.style.display = "none";
+      second.style.display = "flex";
+    }
+
+    function hideShow2() {
+      second.style.display = "none";
+      third.style.display = "flex";
+    }
+
+    function hideShow3() {
+      third.style.display = "none";
+      fourth.style.display = "flex";
+    }
+
+
+    
+
+
+
+
     function captureCamera(callback) {
     navigator.mediaDevices.getUserMedia({
     video: true
@@ -18,7 +43,7 @@ console.log("Hello World!");
     .then(function(stream) {
       myvideo.srcObject = stream;
       myvideo.play();
-    callback(stream);
+      callback && callback(stream);
     })
     .catch(function(error) {
     alert('Unable to capture your camera. Please check console logs.');
@@ -41,6 +66,9 @@ console.log("Hello World!");
     console.log(form.get('file'));
   
     document.getElementById("btn-upload").onclick = function postgif() {
+
+      fourth.style.display = "none";
+      fifth.style.display = "flex";
   
     fetch('https://upload.giphy.com/v1/gifs?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH', {
     method: "POST",
@@ -91,20 +119,31 @@ console.log("Hello World!");
   
         localStorage.getItem('file');
   
+
+        setTimeout(function(){ 
+          fifth.style.display = "none";
+          sixth.style.display = "block";
+        }, 5000);
+
+
         }
   
-        var recorder; // globally accessible
+
+
+
+
+        var recorder;
   
-        document.getElementById('btn-start-recording').onclick = function() {
+        function startRecordingNow() {
         this.disabled = true;
-        captureCamera(function(stream) {
+        captureCamera
+        (function(stream) {
         recorder = RecordRTC(stream, {
         type: 'gif',
         frameRate: 1,
         quality: 10,
         width: 360,
         hidden: 240,
-        
         onGifRecordingStarted: function() {
         },
   
@@ -123,7 +162,7 @@ console.log("Hello World!");
         });
         };
   
-        document.getElementById('btn-stop-recording').onclick = function() {
+        function stopRecordingNow() {
         this.disabled = true;
         recorder.stopRecording(stopRecordingCallback);
         };

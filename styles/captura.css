@@ -187,12 +187,21 @@ padding-bottom: 38px;
      z-index: 999;
  }
 
- .previewContainer video {
-     position: relative;
-     top: 0;
-     left: 0;
-     max-height: 468px;
-     width: auto;
+ .previewContainer2 {
+    height: 468px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin: 8px 14px 21px 8px;
+    padding: 3px;
+ }
+
+ #isavideo {
+    object-fit: cover;
+    width: 100%; 
+    max-height: 468px;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
  }
 
  .previewContainer {
@@ -484,7 +493,7 @@ margin-bottom: 14px;
     padding-top: 1px;
 }
 
-/* #window1 {
+#window1 {
     display: block;
 }
 
@@ -506,4 +515,4 @@ margin-bottom: 14px;
 
 #window6 {
     display: none;
-} */
+}
