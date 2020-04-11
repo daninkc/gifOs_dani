@@ -196,6 +196,8 @@ console.log("Hello World!");
   
         }) }
 
+addto();
+
         document.getElementById("btn-done").onclick = function hideall() {
           sixth.style.display = "none";
         }
