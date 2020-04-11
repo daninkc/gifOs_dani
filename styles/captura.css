@@ -516,3 +516,7 @@ margin-bottom: 14px;
 #window6 {
     display: none;
 }
+
+.emptyurl {
+    display: none;
+}

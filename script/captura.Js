@@ -14,8 +14,9 @@ console.log("Hello World!");
     var fourth = document.getElementById("window4");
     var fifth = document.getElementById("window5");
     var sixth = document.getElementById("window6");
+    var smallprev = document.getElementById("small");
 
-    function hideShow1() {
+    function hideShow1(one, two) {
       first.style.display = "none";
       second.style.display = "flex";
     }
@@ -29,11 +30,6 @@ console.log("Hello World!");
       third.style.display = "none";
       fourth.style.display = "flex";
     }
-
-
-    
-
-
 
 
     function captureCamera(callback) {
@@ -82,6 +78,7 @@ console.log("Hello World!");
     console.log(data);
     var dataid = data.data.id;
     console.log(dataid);
+
   
     fetch("https://api.giphy.com/v1/gifs/" + dataid + "?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH")
     .then(response => {
@@ -89,10 +86,16 @@ console.log("Hello World!");
     })
     .then(object => {
     console.log(object);
+    urltodld = object.data.images.original.url;
+    small.src = urltodld;
+    console.log(urltodld);
+
+    var aninput = document.getElementById("emptyfield");
+    aninput.value = urltodld;
+    
     localStorage.setItem(dataid, JSON.stringify(object));
     
       var y = localStorage.getItem(dataid);
-      console.log(y);
         var yparsed = JSON.parse(y);              //la convierto
         var urlmygif = yparsed.data.images.original.url;      //obtengo la url
   
@@ -104,9 +107,6 @@ console.log("Hello World!");
         imagen2.classList.add('obtgif');
         obtainedbox.appendChild(imagen2);                     //la adjunto al div
         imagen2.src = urlmygif;                               //le asigno source
-        console.log(urlmygif);
-        
-  
   
         })
   
@@ -123,7 +123,7 @@ console.log("Hello World!");
         setTimeout(function(){ 
           fifth.style.display = "none";
           sixth.style.display = "block";
-        }, 5000);
+        }, 7000);
 
 
         }
@@ -196,4 +196,6 @@ console.log("Hello World!");
   
         }) }
 
-        
+        document.getElementById("btn-done").onclick = function hideall() {
+          sixth.style.display = "none";
+        }
