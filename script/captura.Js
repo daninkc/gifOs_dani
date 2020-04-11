@@ -21,6 +21,37 @@ console.log("Hello World!");
 
 
     function hideShow1() {
+       function addto() {
+  
+        for (i = 0; i <localStorage.length; i++ ){
+        arr[i]=localStorage.key(i); if(localStorage.key(i)==='danisgif' ) {
+        arr.splice(i, 1); }
+        }
+        console.log(arr);
+  
+        arr.forEach(keyvalue => {
+  
+        var x = localStorage.getItem(keyvalue);
+        var xparsed = JSON.parse(x);
+  
+        var urlmygif = xparsed.data.images.original.url;
+  
+        var divfornew = document.getElementById('here');
+  
+        const obtainedbox = document.createElement('div');
+        obtainedbox.classList.add('obtgifbox');
+        divfornew.appendChild(obtainedbox);
+  
+        const imagen2 = document.createElement('img')
+        imagen2.classList.add('obtgif');
+        obtainedbox.appendChild(imagen2);
+        imagen2.src = urlmygif;
+  
+        }) }
+
+addto();
+
+    function hideShow1(one, two) {
       first.style.display = "none";
       second.style.display = "flex";
     }
@@ -173,34 +204,6 @@ console.log("Hello World!");
         recorder.stopRecording(stopRecordingCallback);
         };
   
-  
-       function addto() {
-  
-        for (i = 0; i <localStorage.length; i++ ){
-        arr[i]=localStorage.key(i); if(localStorage.key(i)==='danisgif' ) {
-        arr.splice(i, 1); }
-        }
-        console.log(arr);
-  
-        arr.forEach(keyvalue => {
-  
-        var x = localStorage.getItem(keyvalue);
-        var xparsed = JSON.parse(x);
-  
-        var urlmygif = xparsed.data.images.original.url;
-  
-        var divfornew = document.getElementById('here');
-  
-        const obtainedbox = document.createElement('div');
-        obtainedbox.classList.add('obtgifbox');
-        divfornew.appendChild(obtainedbox);
-  
-        const imagen2 = document.createElement('img')
-        imagen2.classList.add('obtgif');
-        obtainedbox.appendChild(imagen2);
-        imagen2.src = urlmygif;
-  
-        }) }
 
         document.getElementById("btn-done").onclick = function hideall() {
           sixth.style.display = "none";
