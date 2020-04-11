@@ -1,4 +1,3 @@
-
     let picturediv = document.getElementById('pictures');
     let fixedsearches = ["elephant", "hedgehog", "puppy", "penguin"];
     let giphyAPITrend =
@@ -7,7 +6,7 @@
 
     function getGifsByTerm() {
 
-        fixedsearches.forEach(searchterm => { //recorre el array de terminos
+        fixedsearches.forEach(searchterm => { 
             searchUrl = 'https://api.giphy.com/v1/gifs/search?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH&q=' +
                 searchterm + '&limit=1&offset=0&rating=G&lang=en';
 
@@ -132,11 +131,10 @@
     trendingGifs();
 
 
+  
 
 
-
-
-    function userSearch() {
+    function valueSearch(searchValue) {
         let sectiontohide = document.getElementById("gifTendencias");
             sectiontohide.style.display = "none";
 
@@ -146,9 +144,12 @@
         var res = str.replace("Tendencias", "Resultados");
         document.getElementById("tendenciastitle").innerHTML = res;
 
-        function valueSearch(searchValue) {
+
             searchValue = document.getElementById('userSearch').value;
              console.log(searchValue);
+
+                document.getElementById("results").innerHTML = "";
+
               let searchitemsurl = 'https://api.giphy.com/v1/gifs/search?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH&q='
                 + searchValue + '&limit=24&offset=0&rating=G&lang=en';
 
@@ -179,6 +180,24 @@
 
             }
 
-            valueSearch();
 
+function showmenu() {
+    const modes = document.getElementById("coloroptions");
+
+    if (modes.style.display === "none") {
+        modes.style.display = "flex";
+      } else {
+        modes.style.display = "none";
+      }
+
+}
+
+    function darkMode(){
+        document.getElementById('styles').href = './styles/main-dark.css';
+        document.getElementById('coloroptions').style.display = 'none';
+        
     }
+      function lightMode(){
+        document.getElementById('styles').href = './styles/main.css';
+        document.getElementById('coloroptions').style.display = 'none';
+      }

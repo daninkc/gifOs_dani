@@ -1,5 +1,5 @@
 body {
-    background-color: #FFF4FD;
+    background-color: #110038;
     margin: 0px;
     border: 0px;
     font-family: 'Chakra Petch', sans-serif;
@@ -13,9 +13,13 @@ main {
     border: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     height: 23px;
-    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
     box-shadow: 0 1px 0 0 #110038;
     margin-bottom: 35px;
     padding-left: 7px;
@@ -39,12 +43,12 @@ header p {
 button {
     height: 36px;
     width: 144px;
-    background: #F7C9F3;
+    background: #EE3EFE;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
-    color: #110038;
+    color: #FFFFFF;;
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
@@ -65,14 +69,14 @@ button {
     justify-content: center;
     height: 36px;
     width: 144px;
-    background: #F7C9F3;
+    background: #EE3EFE;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
-    color: #110038;
+    color: #FFFFFF;
     letter-spacing: 0;
-    text-decoration: none;
+    
     line-height: 18px;
     margin: 0px;
 }
@@ -94,12 +98,11 @@ button {
     border: none;
     box-shadow: none;
     height: 18px;
-    color: #110038;
+    color: #FFFFFF;
     letter-spacing: 0;
     line-height: 18px;
     width: 76px;
     left: 0px;
-    text-decoration: none;
 }
 
 .searchbar {
@@ -112,7 +115,7 @@ button {
 }
 
 .barTitle {
-    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
     padding-left: 3px;
     height: 24px;
 }
@@ -126,23 +129,15 @@ button {
     box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
     padding-left: 15px;
     margin-right: 8px;
+    width: 86%;
 }
-
-.tema {
-position: relative;
-}
-
-.sailormodes {
-    display: none;
-    position: absolute;
-}
-
 
 .buscar {
     background: #E6E6E6;
     border: 1px solid #808080;
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
     width: 102px;
+    margin-right: 10px;
 }
 
 .buttonDiv {
@@ -226,7 +221,7 @@ box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     height: 24px;
     margin-top: 3px;
     margin-left: 4px;
-    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
     align-items: center;
 }
 
@@ -335,7 +330,7 @@ margin: 4px 4px 4px 4px;
 
 .hashtags {
         width: 298px;
-        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        background-image: linear-gradient(270deg, #EE3EFE 0%, #4180F6 100%);
         align-items: center;
         z-index: 3;
         margin: 0px;
@@ -364,43 +359,41 @@ margin: 4px 4px 4px 4px;
         }
 
 
+#coloroptions {
+    position: absolute;
+    margin-left: 16px;
+    background: #B4B4B4;
+box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+height: 102px;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 160px;
+}
 
+.options button {
+    width: 160px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
 
-        #coloroptions {
-            position: absolute;
-            margin-left: 16px;
-            background: #B4B4B4;
-        box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        height: 102px;
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 160px;
-        }
-        
-        .options button {
-            width: 160px;
-            margin-top: 0px;
-            margin-bottom: 10px;
-            background: #CCCCCC;
-            border: 1px solid #808080;
-            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            padding-left: 16px;
-            font-size: 16px;
-            color: #110038;
-            letter-spacing: 0;
-            line-height: 22px;
-        }
-        
-        .options button:last-child {
-            background: #2E32FB;
-            border: 1px solid rgba(51, 53, 143, 0.20);
-            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-            color: #FFFFFF;
-        }
+.options button:last-child {
+    background: #2E32FB;
+    border: 1px solid rgba(51, 53, 143, 0.20);
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+    color: #FFFFFF;
+}

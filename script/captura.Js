@@ -1,6 +1,5 @@
 console.log("Hello World!");
 
-
     var image = document.getElementById('videocontainer');
     var secondimage = document.getElementById('secondpreview');
     var thirdimage = document.getElementById('thirdpreview')
@@ -16,7 +15,12 @@ console.log("Hello World!");
     var sixth = document.getElementById("window6");
     var smallprev = document.getElementById("small");
 
-    function hideShow1(one, two) {
+    document.getElementById("btn-cancel").onclick = function hideShow() {
+      first.style.display = "none";
+    }
+
+
+    function hideShow1() {
       first.style.display = "none";
       second.style.display = "flex";
     }
@@ -42,7 +46,7 @@ console.log("Hello World!");
       callback && callback(stream);
     })
     .catch(function(error) {
-    alert('Unable to capture your camera. Please check console logs.');
+    alert('Ooops. Necesitamos permiso para usar tu cámara :(');
     console.error(error);
     });
     }
@@ -86,6 +90,8 @@ console.log("Hello World!");
     })
     .then(object => {
     console.log(object);
+
+    
     urltodld = object.data.images.original.url;
     small.src = urltodld;
     console.log(urltodld);
