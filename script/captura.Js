@@ -15,13 +15,31 @@ console.log("Hello World!");
     var sixth = document.getElementById("window6");
     var smallprev = document.getElementById("small");
 
+
+    function checkMode() {
+      if (sessionStorage.getItem("mode") === "dark") {
+        document.getElementById("capturastyles").href = './styles/main-dark.css';
+        document.getElementById('logo1').src = './assets/gifOF_logo_dark.png'
+    }
+    else if (sessionStorage.getItem("mode") === "light") {
+      document.getElementById("capturastyles").href = './styles/main.css';
+      document.getElementById('logo1').src = './assets/gifOF_logo.png'
+    }
+
+    }
+
+    checkMode();
+
+
+
+
     document.getElementById("btn-cancel").onclick = function hideShow() {
       first.style.display = "none";
     }
 
+    
 
-    function hideShow1() {
-       function addto() {
+  function addto() {
   
         for (i = 0; i <localStorage.length; i++ ){
         arr[i]=localStorage.key(i); if(localStorage.key(i)==='danisgif' ) {
@@ -49,7 +67,7 @@ console.log("Hello World!");
   
         }) }
 
-addto();
+
 
     function hideShow1(one, two) {
       first.style.display = "none";
@@ -66,6 +84,10 @@ addto();
       fourth.style.display = "flex";
     }
 
+    function hideShow6() {
+      fourth.style.display = "none";
+      third.style.display = "flex";
+    }
 
     function captureCamera(callback) {
     navigator.mediaDevices.getUserMedia({
@@ -77,8 +99,8 @@ addto();
       callback && callback(stream);
     })
     .catch(function(error) {
-    alert('Ooops. Necesitamos permiso para usar tu cámara :(');
     console.error(error);
+    alert("Ups, necesitamos tu cámara! Actualiza la página y vuelve a intentarlo");
     });
     }
   
@@ -88,7 +110,6 @@ addto();
     console.log('Stopped recording');
     var sourceSet = URL.createObjectURL(recorder.getBlob());
     thirdimage.src = sourceSet;
-    downloadref.href = sourceSet;
     console.log(sourceSet);
 
     let form = new FormData();
@@ -98,8 +119,18 @@ addto();
   
     document.getElementById("btn-upload").onclick = function postgif() {
 
+
+      setTimeout(function(){ 
+        fifth.style.display = "none";
+        sixth.style.display = "block";
+      }, 5000);
+
+
       fourth.style.display = "none";
       fifth.style.display = "flex";
+
+      downloadref.href = sourceSet;
+
   
     fetch('https://upload.giphy.com/v1/gifs?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH', {
     method: "POST",
@@ -123,9 +154,12 @@ addto();
     console.log(object);
 
     
+
+    
     urltodld = object.data.images.original.url;
-    small.src = urltodld;
+    smallprev.src = urltodld;
     console.log(urltodld);
+
 
     var aninput = document.getElementById("emptyfield");
     aninput.value = urltodld;
@@ -133,7 +167,7 @@ addto();
     localStorage.setItem(dataid, JSON.stringify(object));
     
       var y = localStorage.getItem(dataid);
-        var yparsed = JSON.parse(y);              //la convierto
+        var yparsed = JSON.parse(y);                          //la convierto
         var urlmygif = yparsed.data.images.original.url;      //obtengo la url
   
         const obtainedbox = document.createElement('div');    //creo el div
@@ -155,13 +189,6 @@ addto();
         recorder = null;
   
         localStorage.getItem('file');
-  
-
-        setTimeout(function(){ 
-          fifth.style.display = "none";
-          sixth.style.display = "block";
-        }, 7000);
-
 
         }
   
@@ -208,3 +235,19 @@ addto();
         document.getElementById("btn-done").onclick = function hideall() {
           sixth.style.display = "none";
         }
+
+
+        function copytext() {
+          var copyhere = document.getElementById('fieldforcopy');
+      copyhere.value = urltodld;
+      var copyText = document.getElementById("myInput");
+
+      /* Select the text field */
+      copyhere.select();
+    
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+    
+      alert("Yay! Ya tienes tu enlace copiado al portapapeles");
+
+    }

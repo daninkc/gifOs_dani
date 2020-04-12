@@ -17,7 +17,7 @@
         </header>
 
         <section class="topbar">
-            <img src="/assets/gifOF_logo.png" alt="GuifOs logo">
+            <img id="logo" src="/assets/gifOF_logo.png" alt="GuifOs logo">
             <span class="botones"><a href="/captura.html" class="crear" >Crear Guifos</a>
                 <div class="tema"><button class="elegir" onclick="showmenu();">Elegir tema</button><button class="dropdown" onclick="showmenu();"><img
                             src="assets/dropdown.svg" alt="dropdown button"></button>
@@ -26,22 +26,18 @@
                                 <button id="sailornight" onclick="darkMode();">Sailor Night</button>
                             </div>
                             </div>
-                <a href="captura.html" class="misGuifos">Mis Guifos</a></span>
-            <span class="botones"><a href="https://daninkc.github.io/gifOs_dani/captura.html" class="crear" >Crear Guifos</a>
-                <span class="tema"><button class="elegir">Elegir tema</button><button class="dropdown"><img
-                            src="assets/dropdown.svg" alt="dropdown button"></button></span>
-                <a href="misGuifos" class="misGuifos">Mis Guifos</a></span>
+                <a href="captura.html" class="misGuifos"><u>M</u>is Guifos</a></span>
         </section>
-        <section class="searchbar">
+        <section class="searchbar" id="mysearch">
             <div class="barTitle">Buscar</div>
             <input id="userSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"></input>
             <button class="buscar" onclick="valueSearch()"><span class="buttonDiv"><img src="assets/lupa_inactive.svg"
                         alt="Lupa inactiva">
                     <span>Buscar</span></span></button>
-            <div class="extendedSearchBar">
-                <span class="searchResult">First search result</span>
-                <span class="searchResult">Second search result</span>
-                <span class="searchResult">Third search result</span>
+            <div class="extendedSearchBar" id="extend">
+                <button class="searchResult" id="bad" onclick="getSearchResultsSuggestionsNumberOne();">Bad mood</button>
+                <button class="searchResult" id="good" onclick="getSearchResultsSuggestionsNumberTwo();">Good mood</button>
+                <button class="searchResult" id="soso" onclick="getSearchResultsSuggestionsNumberThree();">So-so</button>
             </div>
         </section>
 

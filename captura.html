@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/captura-dark.css">
+    <link id="capturastyles" rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -17,7 +17,7 @@
     </header>
 
     <section class="topbar">
-        <a href="index.html"><img class="flecha" src="assets/arrow.svg" alt="flecha hacia atrás"><img src="assets/gifOF_logo.png"
+        <a href="index.html"><img class="flecha" src="assets/arrow.svg" alt="flecha hacia atrás"><img id="logo1" src="assets/gifOF_logo.png"
             alt="GuifOs logo"></a>
     </section>
 
@@ -26,7 +26,7 @@
         <div class="windowTitle">
             Crear Guifos
         </div>
-        <h4><b>Aquí podrás crear tus propios Guifos</b></h4>
+        <h4><br>Aquí podrás crear tus propios Guifos</br></h4>
         <p>Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los
             pasos para crear tu guifo son: <br><br>
             1) Dar permisos de acceso a la cámara (solo por el tiempo de uso)
@@ -107,7 +107,7 @@
                 </div>
             </span>
             <span class="rptuploadbuttons">
-                <button class="repetir">Repetir captura</button>
+                <button class="repetir" onclick="hideShow6(); startRecordingNow();">Repetir captura</button>
                 <button class="subir" id="btn-upload">Subir Guifo</button>
             </span>
         </span>
@@ -167,8 +167,9 @@
             <div class="smallPreviewContainer"><img class="smallPreview" id="small" src=""></div>
             <div class="rightButtons">
                 <p><b>Guifo creado con éxito</b></p>
-                <button class="copiarEnlace" id="btn-copylink">Copiar enlace Guifo</button>
-                <a class="descargarGuifo" id="btn-download" download="mygif.gif">Descargar Guifo</button>
+                <button class="copiarEnlace" id="btn-copylink" onclick="copytext();">Copiar enlace Guifo</button>
+                <input class="hiddeninput" type="text" id="fieldforcopy">
+                <a class="descargarGuifo" id="btn-download" download="mygif.gif">Descargar Guifo</a>
             </div>
         </div>
         <span class="readyButton">
