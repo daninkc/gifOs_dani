@@ -94,7 +94,7 @@
 
                         const close = document.createElement('img');
                         close.classList.add('closebutton');
-                        close.src = "/button3.svg";
+                        close.src = "assets/button3.svg";
                         nuevotitle.appendChild(close);
 
                     })
