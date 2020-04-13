@@ -145,6 +145,14 @@ border: 1px solid #110038;
     text-decoration: none;
 }
 
+.misGuifos:hover {
+    border: 1px solid #110038;
+}
+
+.misGuifos:active {
+    color: #110038;
+}
+
 .searchbar {
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
