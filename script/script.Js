@@ -149,14 +149,14 @@
         if (sessionStorage.getItem("mode") === "light") {
         var btntochange = document.getElementById('btn-search');
         btntochange.className = "buscarfocused";
-        document.getElementById("lupa").src = "./assets/lupa.svg"
+        document.getElementById("lupa").src = "assets/lupa.svg"
         var texttochange = document.getElementById('findtext');
         texttochange.className = "buscartext";
         }
         else {
             var btntochange = document.getElementById('btn-search');
             btntochange.className = "buscarfocused";
-            document.getElementById("lupa").src = "./assets/lupa_light.svg"
+            document.getElementById("lupa").src = "assets/lupa_light.svg"
             var texttochange = document.getElementById('findtext');
             texttochange.className = "buscartext";
         }
@@ -166,14 +166,14 @@
           if (sessionStorage.getItem("mode") === "light") {
         var btntochange = document.getElementById('btn-search');
         btntochange.className = "buscar";
-        document.getElementById("lupa").src = "./assets/lupa_inactive.svg"
+        document.getElementById("lupa").src = "assets/lupa_inactive.svg"
         var texttochange = document.getElementById('findtext');
         texttochange.className = "find";
         }
         else {
             var btntochange = document.getElementById('btn-search');
             btntochange.className = "buscar";
-            document.getElementById("lupa").src = "./assets/lupa_inactive.svg"
+            document.getElementById("lupa").src = "assets/lupa_inactive.svg"
             var texttochange = document.getElementById('findtext');
             texttochange.className = "find";
         }
@@ -327,27 +327,27 @@ function showmenu() {
 }
 
     function darkMode(){
-        document.getElementById('styles').href = './styles/main-dark.css';
+        document.getElementById('styles').href = 'styles/main-dark.css';
         document.getElementById('coloroptions').style.display = 'none';
         sessionStorage.setItem("mode", "dark")
-        document.getElementById('logo').src = './assets/gifOF_logo_dark.png'
+        document.getElementById('logo').src = 'assets/gifOF_logo_dark.png'
     }
 
       function lightMode(){
-        document.getElementById('styles').href = './styles/main.css';
+        document.getElementById('styles').href = 'styles/main.css';
         document.getElementById('coloroptions').style.display = 'none';
         sessionStorage.setItem("mode", "light")
-        document.getElementById('logo').src = './assets/gifOF_logo.png'
+        document.getElementById('logo').src = 'assets/gifOF_logo.png'
       }
 
       function checkMode() {
         if (sessionStorage.getItem("mode") === "dark") {
-          document.getElementById("styles").href = './styles/main-dark.css';
-          document.getElementById('logo').src = './assets/gifOF_logo_dark.png'
+          document.getElementById("styles").href = 'styles/main-dark.css';
+          document.getElementById('logo').src = 'assets/gifOF_logo_dark.png'
       }
       else if (sessionStorage.getItem("mode") === "light") {
-        document.getElementById("styles").href = './styles/main.css';
-        document.getElementById('logo').src = './assets/gifOF_logo.png'
+        document.getElementById("styles").href = 'styles/main.css';
+        document.getElementById('logo').src = 'assets/gifOF_logo.png'
       }
   
       }
