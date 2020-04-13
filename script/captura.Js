@@ -287,16 +287,9 @@ console.log("Hello World!");
 
 
         function copytext() {
-          var copyhere = document.getElementById('fieldforcopy');
-      copyhere.value = urltodld;
-      var copyText = document.getElementById("myInput");
-
-      /* Select the text field */
-      copyhere.select();
-    
-      /* Copy the text inside the text field */
-      document.execCommand("copy");
-    
+      
+         navigator.clipboard.writeText(urltodld);
+             
       alert("Yay! Ya tenés tu enlace copiado al portapapeles");
 
     }
