@@ -55,7 +55,7 @@
             <video id="isavideo"></video>
         </div>
         <span class="captura"><button class="cameraIcon"><img src="assets/camera.svg"
-                    alt="camera button"></button><button id="btn-start-recording" onclick="hideShow2(); startRecordingNow();" class="capturar">Capturar</button></span>
+                    alt="camera button"></button><button id="btn-start-recording" onclick="hideShow2(); startRecordingNow(); start();" class="capturar">Capturar</button></span>
     </section>
 
 
@@ -67,9 +67,14 @@
             <span><img src="assets/button3.svg" alt="botón de cierre"></span>
         </div>
         <div class="previewContainer"><img class="preview" id="secondpreview"></div>
+        <span class="timerandloader">
+        <span id="time" class="timer">
+            00 : 00 : 00
+        </span>
         <span class="recording"><button class="recordingIcon"><img src="assets/recording.svg"
                     alt="recording button"></button><button class="record" id="btn-stop-recording"
-                    onclick="hideShow3(); stopRecordingNow();">Listo</button></span>
+                    onclick="hideShow3(); stopRecordingNow(); stop();">Listo</button></span>
+                </span>
     </section>
 
 
@@ -83,32 +88,18 @@
         <div class="previewContainer"><img class="preview" id="thirdpreview"></div>
         <span class="windowFooter">
             <span class="timerandloader">
-                <span class="timer">
-                    <p>00:00:00</p>
+                <span id="time" class="timer">
+                    00 : 00 : 00
                 </span>
-                <div class="fwdButton"><img src="assets/forward.svg" alt="forward button"></div>
-                <div class="progressBar">
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="activeRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                    <div id="inactiveRectangle"></div>
-                </div>
+                <button class="fwdButton" onclick="move();"> <img src="assets/forward.svg" alt="fwd"> </button>
+                    <div class="progresscontainer">
+                        <div id="myProgress">
+                          <div id="myBar"></div>
+                        </div>
+                        </div>
             </span>
             <span class="rptuploadbuttons">
-                <button class="repetir" onclick="hideShow6(); startRecordingNow();">Repetir captura</button>
+                <button class="repetir" onclick="hideShow6(); startRecordingNow(); reset();">Repetir captura</button>
                 <button class="subir" id="btn-upload">Subir Guifo</button>
             </span>
         </span>
@@ -124,35 +115,15 @@
         </div>
         <div class="emptyContainer"> <img src="assets/globe_img.png" alt="Globo terráqueo">
             <p>Estamos subiendo tu Guifo</p>
-            <div class="uploadingBar">
-                <div id="activeRectangle"></div>
-                <div id="activeRectangle"></div>
-                <div id="activeRectangle"></div>
-                <div id="activeRectangle"></div>
-                <div id="activeRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-                <div id="inactiveRectangle"></div>
-            </div>
+            <div class="progresscontainer">
+                <div id="myProgress2">
+                  <div id="myBar2"></div>
+                </div>
+                </div>
             <p class="remaining">Tiempo restante: <span>38 años</span> algunos minutos</p>
         </div>
         <div class="cancelButton">
-            <button class="cancel">Cancelar</button>
+            <button onclick="myStopFunction();" class="cancel">Cancelar</button>
         </div>
     </section>
 

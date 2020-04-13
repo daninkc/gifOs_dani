@@ -6,7 +6,6 @@
     let tendenciasdiv = document.getElementById('gifTendencias');
 
 
-
     function checkMode() {
         if (sessionStorage.getItem("mode") === "dark") {
           document.getElementById("styles").href = './styles/main-dark.css';
@@ -114,7 +113,7 @@
                 json.data.forEach(item => {
                     var gifurl = item.images.original.url;
                     var bottomp = item.title;
-                    var bottomarray = bottomp.split(" ", 4);
+                    var bottomarray = bottomp.split(" ", 3);
 
                     for(i=0; i<bottomarray.length; i++) {
                         var toadd = ("#" + bottomarray[0] + " " + "#" + bottomarray[1] + " " +
@@ -146,6 +145,39 @@
 
     trendingGifs();
 
+    function changebutton() {
+        if (sessionStorage.getItem("mode") === "light") {
+        var btntochange = document.getElementById('btn-search');
+        btntochange.className = "buscarfocused";
+        document.getElementById("lupa").src = "./assets/lupa.svg"
+        var texttochange = document.getElementById('findtext');
+        texttochange.className = "buscartext";
+        }
+        else {
+            var btntochange = document.getElementById('btn-search');
+            btntochange.className = "buscarfocused";
+            document.getElementById("lupa").src = "./assets/lupa_light.svg"
+            var texttochange = document.getElementById('findtext');
+            texttochange.className = "buscartext";
+        }
+    }
+
+    function changeback() {
+          if (sessionStorage.getItem("mode") === "light") {
+        var btntochange = document.getElementById('btn-search');
+        btntochange.className = "buscar";
+        document.getElementById("lupa").src = "./assets/lupa_inactive.svg"
+        var texttochange = document.getElementById('findtext');
+        texttochange.className = "find";
+        }
+        else {
+            var btntochange = document.getElementById('btn-search');
+            btntochange.className = "buscar";
+            document.getElementById("lupa").src = "./assets/lupa_inactive.svg"
+            var texttochange = document.getElementById('findtext');
+            texttochange.className = "find";
+        }
+    }
 
     document.getElementById('userSearch').onclick = function showdiv() {
         document.getElementById('extend').style.display = "flex";
@@ -236,6 +268,7 @@ return error
 
 
     function valueSearch(searchValue) {
+
         let sectiontohide = document.getElementById("gifTendencias");
             sectiontohide.style.display = "none";
 
@@ -306,7 +339,6 @@ function showmenu() {
         sessionStorage.setItem("mode", "light")
         document.getElementById('logo').src = './assets/gifOF_logo.png'
       }
-
 
       function checkMode() {
         if (sessionStorage.getItem("mode") === "dark") {

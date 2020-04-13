@@ -30,10 +30,12 @@
         </section>
         <section class="searchbar" id="mysearch">
             <div class="barTitle">Buscar</div>
-            <input id="userSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"></input>
-            <button class="buscar" onclick="valueSearch()"><span class="buttonDiv"><img src="assets/lupa_inactive.svg"
-                        alt="Lupa inactiva">
-                    <span>Buscar</span></span></button>
+            <input id="userSearch" onfocus="changebutton();" onfocusout="changeback();"
+            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"></input>
+            <button class="buscar" id="btn-search" onclick="valueSearch();"
+            onmouseover="changebutton();"><span class="buttonDiv">
+                <img id="lupa" src="assets/lupa_inactive.svg" alt="Lupa inactiva">
+                    <span class="find" id="findtext">Buscar</span></span></button>
             <div class="extendedSearchBar" id="extend">
                 <button class="searchResult" id="bad" onclick="getSearchResultsSuggestionsNumberOne();">Bad mood</button>
                 <button class="searchResult" id="good" onclick="getSearchResultsSuggestionsNumberTwo();">Good mood</button>

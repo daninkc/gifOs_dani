@@ -30,14 +30,32 @@ console.log("Hello World!");
 
     checkMode();
 
-
+    function move() {
+      var i = 0;
+      if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 0.2);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width++;
+            elem.style.width = width + "%";
+          }
+        }
+      }
+    }
 
 
     document.getElementById("btn-cancel").onclick = function hideShow() {
       first.style.display = "none";
     }
 
-    
+
+
 
   function addto() {
   
@@ -67,6 +85,8 @@ console.log("Hello World!");
   
         }) }
 
+        addto();
+
 
 
     function hideShow1(one, two) {
@@ -86,7 +106,12 @@ console.log("Hello World!");
 
     function hideShow6() {
       fourth.style.display = "none";
-      third.style.display = "flex";
+      second.style.display = "flex";
+    }
+
+    function hideShow4() {
+      fifth.style.display = "none";
+      first.style.display = "block"
     }
 
     function captureCamera(callback) {
@@ -116,11 +141,29 @@ console.log("Hello World!");
     form.append('file', recorder.getBlob(), 'myGif.gif');
   
     console.log(form.get('file'));
+    
   
     document.getElementById("btn-upload").onclick = function postgif() {
 
+        var i = 0;
+  
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar2");
+          var width = 1;
+          var id = setInterval(frame, 40);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+            }
+          }
+        }
 
-      setTimeout(function(){ 
+      finishupload = setTimeout(function(){ 
         fifth.style.display = "none";
         sixth.style.display = "block";
       }, 5000);
@@ -152,8 +195,6 @@ console.log("Hello World!");
     })
     .then(object => {
     console.log(object);
-
-    
 
     
     urltodld = object.data.images.original.url;
@@ -189,7 +230,7 @@ console.log("Hello World!");
         recorder = null;
   
         localStorage.getItem('file');
-
+        
         }
   
 
@@ -211,6 +252,7 @@ console.log("Hello World!");
         onGifRecordingStarted: function() {
         },
   
+        
         onGifPreview: function(gifURL) {
         secondimage.src = gifURL;
         }
@@ -230,7 +272,14 @@ console.log("Hello World!");
         this.disabled = true;
         recorder.stopRecording(stopRecordingCallback);
         };
-  
+
+
+        function myStopFunction() {
+          clearTimeout(finishupload);
+          fifth.style.display = "none";
+          first.style.display = "block";
+        }
+
 
         document.getElementById("btn-done").onclick = function hideall() {
           sixth.style.display = "none";
@@ -248,6 +297,72 @@ console.log("Hello World!");
       /* Copy the text inside the text field */
       document.execCommand("copy");
     
-      alert("Yay! Ya tienes tu enlace copiado al portapapeles");
+      alert("Yay! Ya tenés tu enlace copiado al portapapeles");
 
     }
+
+
+    function move() {
+      var i = 0;
+
+      if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 0.2);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width++;
+            elem.style.width = width + "%";
+          }
+        }
+      }
+    }
+
+
+    window.onload = function() {
+      pantalla = document.getElementById("time");
+   }
+
+   var isMarch = false; 
+   var acumularTime = 0; 
+   function start () {
+            if (isMarch == false) { 
+               timeInicial = new Date();
+               control = setInterval(cronometro,10);
+               isMarch = true;
+               }
+            }
+   function cronometro () { 
+            timeActual = new Date();
+            acumularTime = timeActual - timeInicial;
+            acumularTime2 = new Date();
+            acumularTime2.setTime(acumularTime); 
+            cc = Math.round(acumularTime2.getMilliseconds()/10);
+            ss = acumularTime2.getSeconds();
+            mm = acumularTime2.getMinutes();
+            if (cc < 10) {cc = "0"+cc;}
+            if (ss < 10) {ss = "0"+ss;} 
+            if (mm < 10) {mm = "0"+mm;}
+            pantalla.innerHTML = mm+" : "+ss+" : "+cc;
+            }
+   
+   function stop () { 
+            if (isMarch == true) {
+               clearInterval(control);
+               isMarch = false;
+               }     
+            }      
+   
+   function reset () {
+            if (isMarch == true) {
+               clearInterval(control);
+               isMarch = false;
+               }
+            acumularTime = 0;
+            pantalla.innerHTML = "00 : 00 : 00";
+            }
+   
