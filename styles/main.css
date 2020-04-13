@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #FFF4FD;
     margin: 0px;
@@ -15,8 +17,11 @@ main {
 
 header {
     height: 23px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+    background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-    box-shadow: 0 1px 0 0 #110038;
+    -webkit-box-shadow: 0 1px 0 0 #110038;
+            box-shadow: 0 1px 0 0 #110038;
     margin-bottom: 35px;
     padding-left: 7px;
 }
@@ -28,9 +33,15 @@ header p {
 
 .topbar {
     padding-left: 91px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-right: 140.5px;
     margin-bottom: 16px;
 }
@@ -41,7 +52,8 @@ button {
     width: 144px;
     background: #F7C9F3;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
     color: #110038;
@@ -55,19 +67,30 @@ button {
 }
 
 .botones {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .crear {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 36px;
     width: 144px;
     background: #F7C9F3;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
     color: #110038;
@@ -80,14 +103,16 @@ button {
 .crear:hover {
     background: #E6BBE2;
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 border: 1px solid #110038;
 }
 
 .crear:active {
     background: #E6BBE2;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     border: 1px solid #110038;
 }
 
@@ -99,14 +124,16 @@ border: 1px solid #110038;
 .elegir:hover {
     background: #E6BBE2;
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 border: 1px solid #110038;
 }
 
 .elegir:active {
     background: #E6BBE2;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     border: 1px #110038;
 }
 
@@ -119,14 +146,16 @@ border: 1px solid #110038;
 .dropdown:hover {
     background: #E6BBE2;
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 border: 1px solid #110038;
 }
 
 .dropdown:active {
     background: #E6BBE2;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     border: 1px solid #110038;
 }
 
@@ -137,7 +166,8 @@ border: 1px solid #110038;
 .misGuifos {
     background-color: transparent;
     border: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     height: 18px;
     color: #110038;
     letter-spacing: 0;
@@ -157,7 +187,8 @@ border: 1px solid #110038;
 
 .searchbar {
     background: #E6E6E6;
-    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     padding: 3px 3px 3px 3px;
     height: 99px;
     margin-left: 100px;
@@ -169,6 +200,8 @@ border: 1px solid #110038;
 }
 
 .barTitle {
+    background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+    background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     padding-left: 3px;
     height: 24px;
@@ -180,7 +213,8 @@ border: 1px solid #110038;
     margin-left: 15px;
     background: #FFFFFF;
     border: 1px solid #979797;
-    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
     padding-left: 15px;
     margin-right: 8px;
     width: 86%;
@@ -200,21 +234,24 @@ position: relative;
 .buscar {
     background: #E6E6E6;
     border: 1px solid #808080;
-    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
     width: 102px;
 }
 
 .buscar:active {
     background: #E6BBE2;
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .buscarfocused {
     width: 102px;
     background: #F7C9F3;
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .buscartext {
@@ -222,9 +259,14 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .buttonDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     font-size: 16px;
     color: #B4B4B4;
     letter-spacing: 0;
@@ -236,18 +278,27 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 100px;
     padding-top: 12px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .tag {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: #4180F6;
 border: 1px solid #4C2F99;
-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+        box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
 margin-right: 8px;
 width: 100px;
 padding-left: 7px;
@@ -264,7 +315,8 @@ font-size: 14px;
     margin-top: 64px;
     background: #FFFAFE;
     border: 1px solid #E6BBE2;
-    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
     margin-right: 140px;
     padding: 7px 0px 7px 7px;
     font-size: 14px;
@@ -274,8 +326,12 @@ font-size: 14px;
 }
 
 .suggestionGifs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-right: 140px;
 }
 
@@ -283,15 +339,21 @@ font-size: 14px;
     position: relative;
     z-index: 999;
     background: #E6E6E6;
-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     left: -4px;
 right: 10px;
 width: 100.55%;
 top: 12px;
     height: 150px;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -301,7 +363,8 @@ top: 12px;
     display: block;
     background: #F0F0F0;
     border: 1px solid #808080;
-    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 margin-left: 15px;
 margin-right: 15px;
 width: 97.5%;
@@ -321,18 +384,27 @@ line-height: 22px;
     width: 288px;
     height: 313px;
     background: #E6E6E6;
-    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .gifboxTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 280px;
     height: 24px;
     margin-top: 3px;
     margin-left: 4px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+    background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .gifboxp {
@@ -372,7 +444,8 @@ line-height: 22px;
     height: 34px;
     background: #4180F6;
     border: 1px solid #4C2F99;
-    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+            box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
     z-index: 999;
     margin-top: 242px;
     margin-left: 11px;
@@ -380,9 +453,15 @@ line-height: 22px;
     color: #FFFFFF;
     letter-spacing: 0;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     line-height: 18px;
 }
 
@@ -403,7 +482,8 @@ line-height: 22px;
 .tendenciasdehoy {
     background: #FFFAFE;
     border: 1px solid #E6BBE2;
-    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
     margin-right: 140px;
     padding: 7px 0px 7px 7px;
     font-size: 14px;
@@ -413,11 +493,16 @@ line-height: 22px;
 }
 
 .tendenciasGifs {
+display: -ms-grid;
 display: grid;
+-ms-grid-columns: auto auto auto auto;
 grid-template-columns: auto auto auto auto;
 padding-right: 140px;
-align-content: space-around;
-justify-content: space-between;
+-ms-flex-line-pack: distribute;
+    align-content: space-around;
+-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
 }
 
 .gifBox2 {
@@ -425,7 +510,8 @@ justify-content: space-between;
     height: 298px;
     margin-bottom: 16px;
     background: #E6E6E6;
-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     z-index: 0;
 }
 
@@ -434,14 +520,19 @@ box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     height: 291px;
     background: #E6E6E6;
     z-index: 1;
-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 margin: 4px 4px 4px 4px;
 }
 
 .hashtags {
         width: 298px;
+        background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+        background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
         background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         z-index: 3;
         margin: 0px;
         display: none;
@@ -461,11 +552,16 @@ margin: 4px 4px 4px 4px;
 
 
     .searchresults {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
         padding-right: 140px;
-        align-content: space-around;
-        justify-content: space-between;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         }
 
 
@@ -473,14 +569,20 @@ margin: 4px 4px 4px 4px;
             position: absolute;
             margin-left: 16px;
             background: #E6E6E6;
-            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 10px;
         height: 102px;
         display: none;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         width: 160px;
         }
 
@@ -494,10 +596,15 @@ margin: 4px 4px 4px 4px;
             margin-bottom: 10px;
             background: #FFF4FD;
 border: 1px solid #CCA6C9;
-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             height: 36px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding-left: 16px;
             font-size: 16px;
             color: #110038;
@@ -508,7 +615,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .options button:last-child {
             background: #F0F0F0;
             border: 1px solid #808080;
-            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
             color: #110038;
         }
 
@@ -533,8 +641,11 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         
         header {
             height: 23px;
+            background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+            background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
             background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-            box-shadow: 0 1px 0 0 #110038;
+            -webkit-box-shadow: 0 1px 0 0 #110038;
+                    box-shadow: 0 1px 0 0 #110038;
             margin-bottom: 35px;
             padding-left: 7px;
         }
@@ -546,8 +657,12 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         
         .topbar {
             padding-left: 60px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding-bottom: 38px;
         }
         
@@ -559,13 +674,20 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             margin-left: 378px;
             margin-right: 378px;
             background: #E6E6E6;
-        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
         padding: 3px 3px 3px 3px;
         }
         
         .windowTitle {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+            background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
             background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
             padding-left: 7px;
             height: 24px;
@@ -595,10 +717,17 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .loadWindowButtons {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
             padding-bottom: 36px;
-            justify-content: flex-end;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
             padding-right: 36px;
         }
         
@@ -611,28 +740,38 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .cancel {
             background: #FFF4FD;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         }
 
         .cancel:hover {
             background: #F0E5EE;
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;   
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;   
         }
         
         .start {
             background: #F7C9F3;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
 
         .start:hover {
             background: rgb(214, 177, 211);
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .tendencias {
@@ -643,7 +782,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .tendenciasdehoy {
             background: #FFFAFE;
             border: 1px solid #E6BBE2;
-            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+            -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
             margin-right: 140px;
             padding: 7px 0px 7px 7px;
             font-size: 14px;
@@ -653,11 +793,16 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .mygifs {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
         padding-right: 140px;
-        align-content: space-around;
-        justify-content: space-between;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         }
         
         .obtgifbox {
@@ -665,7 +810,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             height: 298px;
             margin-bottom: 16px;
             background: #E6E6E6;
-        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
             z-index: 0;
         }
         
@@ -674,37 +820,58 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             height: 291px;
             background: #E6E6E6;
             z-index: 1;
-        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
         margin: 4px 4px 4px 4px;
         }
         
         
         
          .loadWindowTitle {
+            background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+            background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
             background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
             padding-left: 4px;
             padding-right: 10px;
             height: 24px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         margin: 3px;
          }
         
          .loadWindowTitle span {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
          }
         
          .loadingWindows {
              height: 548px;
              background: #E6E6E6;
-        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
         margin-left: 265px;
         margin-right: 315px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding-bottom: 38px;
          }
         
@@ -717,13 +884,15 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
          .previewContainer2 {
             height: 468px;
             background: #E6E6E6;
-            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
             margin: 8px 14px 21px 8px;
             padding: 3px;
          }
         
          #isavideo {
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             width: 100%; 
             max-height: 468px;
             z-index: -100;
@@ -734,7 +903,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
          .previewContainer {
             height: 468px;
             background: #E6E6E6;
-            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
             margin: 8px 14px 21px 8px;
             padding: 3px;
          }
@@ -745,7 +915,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
                 height: 36px;
                 background: #F7C9F3;
                 border: 1px solid #110038;
-                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
                 font-family: 'Chakra Petch', sans-serif;
                 font-size: 16px;
                 color: #110038;
@@ -755,9 +926,14 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             }
         
             .captura {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                align-self: flex-end;
-                align-items: center;
+                -ms-flex-item-align: end;
+                    align-self: flex-end;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
                 margin-right: 16px;
             }
         
@@ -768,7 +944,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             .capturar:hover {
                 background: #F0E5EE;
                 border: 1px solid #110038;
-                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
             }
         
         .cameraIcon {
@@ -779,7 +956,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .cameraIcon:hover {
             background: #F0E5EE;
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
             
         
@@ -789,7 +967,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
             height: 36px;
             background: #FF6161;
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
             font-family: 'Chakra Petch', sans-serif;
             font-size: 16px;
             color: #110038;
@@ -800,9 +979,14 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .recording {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-self: flex-end;
-            align-items: center;
+            -ms-flex-item-align: end;
+                align-self: flex-end;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin-right: 16px;
         }
         
@@ -813,7 +997,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .record:hover {
             background: rgb(219, 93, 110);
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .recordingIcon {
@@ -824,31 +1009,51 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .recordingIcon:hover {
             background:  rgb(219, 93, 110);
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         /*botonera de repetir captura o subir*/
         
         .windowFooter {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
         
         .timerandloader {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
 
         #time {
             margin-left: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             background: #FFFFFF;
         border: 1px solid #979797;
-        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
         width: 124px;
         height: 36px;
         margin-left: 11px;
@@ -861,12 +1066,19 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 
         #time2 {
             margin-left: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             background: #FFFFFF;
         border: 1px solid #979797;
-        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
         width: 124px;
         height: 36px;
         margin-left: 11px;
@@ -878,12 +1090,19 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         
         
         .fwdButton {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             background: #F7C9F3;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         width: 20px;
         height: 20px;
         margin-right: 4px;
@@ -895,12 +1114,16 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         
         #myProgress {
           width: 100%;
+          background-image: -webkit-gradient(linear, left top, right top, color-stop(46.15%, #999999), color-stop(46.15%, #e6e6e6), color-stop(50%, #e6e6e6), color-stop(50%, #999999), color-stop(96.15%, #999999), color-stop(96.15%, #e6e6e6), to(#e6e6e6));
+          background-image: -o-linear-gradient(left, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
           background-image: linear-gradient(90deg, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
         background-size: 26.00px 26.00px;
         }
 
         #myProgress2 {
             width: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, color-stop(46.15%, #999999), color-stop(46.15%, #e6e6e6), color-stop(50%, #e6e6e6), color-stop(50%, #999999), color-stop(96.15%, #999999), color-stop(96.15%, #e6e6e6), to(#e6e6e6));
+            background-image: -o-linear-gradient(left, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
             background-image: linear-gradient(90deg, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
           background-size: 26.00px 26.00px;
           }
@@ -908,6 +1131,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         #myBar {
           width: 5%;
           height: 30px;
+          background-image: -webkit-gradient(linear, left top, right top, color-stop(45.83%, #f7c9f3), color-stop(45.83%, #b8b8b8), color-stop(50%, #b8b8b8), color-stop(50%, #f7c9f3), color-stop(95.83%, #f7c9f3), color-stop(95.83%, #b8b8b8), to(#b8b8b8));
+          background-image: -o-linear-gradient(left, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
           background-image: linear-gradient(90deg, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
         background-size: 24.00px 24.00px;
         }
@@ -915,6 +1140,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         #myBar2 {
             width: 5%;
             height: 30px;
+            background-image: -webkit-gradient(linear, left top, right top, color-stop(45.83%, #f7c9f3), color-stop(45.83%, #b8b8b8), color-stop(50%, #b8b8b8), color-stop(50%, #f7c9f3), color-stop(95.83%, #f7c9f3), color-stop(95.83%, #b8b8b8), to(#b8b8b8));
+            background-image: -o-linear-gradient(left, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
             background-image: linear-gradient(90deg, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
           background-size: 24.00px 24.00px;
           }
@@ -927,27 +1154,39 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .suggestiontags p {
             background: #4180F6;
         border: 1px solid #4C2F99;
-        box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+                box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
         margin-right: 30px;
         height: 34px;
         padding-right: 10px;
         padding-left: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-bottom: 50px;
         }
 
         .rptuploadbuttons {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-right: 16px;
         }
         
         .repetir {
             background: #FFF4FD;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         height: 36px;
         width: 144px;
         margin-right: 14px;
@@ -956,7 +1195,8 @@ box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
         .repetir:hover {
             background: #F0E5EE;
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .subir {
@@ -964,27 +1204,34 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         width: 144px;
         background: #F7C9F3;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
 
         .subir:hover {
             background: rgb(214, 177, 211);
 border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+-webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         
         /*subiendo guifo*/
         
         .cancelButton {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: flex-end;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
         }
         
         .cancel {
             background: #FFF4FD;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         width: 144px;
         height: 36px;
         margin-right: 16px;
@@ -992,14 +1239,24 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .emptyContainer {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             height: 468px;
             background: #FFFFFF;
         border: 1px solid #979797;
-        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
             margin: 8px 14px 21px 8px;
             padding: 3px;
         }
@@ -1009,10 +1266,13 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         .uploadingBar {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             background: #B4B4B4;
             border: 1px solid #979797;
-            box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
+            -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
+                    box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
         width: 100%;
         height: 24px;
         padding: 2px 0px 0px 2px;
@@ -1029,7 +1289,8 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         .smallPreviewContainer {
             background: #FFFFFF;
             border: 1px solid #979797;
-            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+            -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
                 padding: 3px;
                 margin-left: 24px;    
                 margin-top: 27px;
@@ -1045,24 +1306,35 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         .ready {
             background: #F7C9F3;
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
 
         .ready:hover {
             background: rgb(214, 177, 211);
             border: 1px solid #110038;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
         
         
         .imageAndButtons {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
         
         .rightButtons {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             margin-left: 24px;
             margin-right: 46px;
             height: 196px;
@@ -1079,18 +1351,26 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         .rightButtons button {
             background: #FFF4FD;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         width: 256px;
         height: 36px;
         margin-bottom: 14px;
         }
         
         .readyButton {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
             margin-top: 50px;
             padding-bottom: 36px;
-            justify-content: flex-end;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
             padding-right: 36px;
         }
         
@@ -1110,7 +1390,8 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
                 margin-left: 378px;
                 margin-right: 378px;
                 background: #E6E6E6;
-            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
             padding-top: 1px;
         }
         
@@ -1148,11 +1429,15 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         }
 
         .gifBox2:hover .afterdiv {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
 
         .afterdiv {
             position: relative;
+            background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+            background-image: -o-linear-gradient(right, #F7C9F3 0%, #4180F6 100%);
             background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
             z-index:999;
             width: 291px;
@@ -1160,7 +1445,9 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
             top: -37px;
             margin: 4px 4px 2px 4px;
             display: none;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
 
         .afterdiv p {
@@ -1176,11 +1463,18 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
       .descargarGuifo {
         background: #FFF4FD;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         height: 36px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-decoration: none;
         color: black;
       }
@@ -1188,7 +1482,8 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
       .descargarGuifo:hover {
         background: #F0E5EE;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
       }
       
       .rightButtons p {
@@ -1210,5 +1505,6 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     .copiarEnlace:hover {
         background: #F0E5EE;
         border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
