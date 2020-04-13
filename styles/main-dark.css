@@ -98,7 +98,14 @@ box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .dropdown {
+    position: relative;
+    left: -10px;
     width: 36px;
+}
+
+
+.titlePlaceholder {
+    margin: 0px;
 }
 
 .dropdown:hover {
@@ -353,7 +360,7 @@ box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .tendencias {
-    margin-top: 64px;
+    margin-top: 0px;
     padding-left: 100px;
 }
 
@@ -1017,6 +1024,42 @@ margin-top: 0px;
 margin-bottom: 0px;
 margin-right: 24px;
 color: black;
+}
+
+#time2 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+width: 124px;
+height: 36px;
+margin-left: 11px;
+margin-top: 0px;
+margin-bottom: 0px;
+margin-right: 24px;
+color: black;
+}
+
+.suggestiontags {
+    display: none;
+    position: relative;
+}
+
+.suggestiontags p {
+    background: #4180F6;
+border: 1px solid #4C2F99;
+box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+margin-right: 30px;
+height: 34px;
+padding-right: 10px;
+padding-left: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 50px;
 }
 
 #btn-download {

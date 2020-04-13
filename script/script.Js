@@ -4,7 +4,7 @@
     let giphyAPITrend =
         `https://api.giphy.com/v1/gifs/trending?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH&limit=24&rating=G`;
     let tendenciasdiv = document.getElementById('gifTendencias');
-
+    let userinput = document.getElementById('userSearch');
 
     function checkMode() {
         if (sessionStorage.getItem("mode") === "dark") {
@@ -145,7 +145,7 @@
 
     trendingGifs();
 
-    function changebutton() {
+    document.getElementById('btn-search').onmousover = function changebutton() {
         if (sessionStorage.getItem("mode") === "light") {
         var btntochange = document.getElementById('btn-search');
         btntochange.className = "buscarfocused";
@@ -162,7 +162,27 @@
         }
     }
 
-    function changeback() {
+
+
+    document.getElementById('userSearch').onfocus = function changebutton() {
+        if (sessionStorage.getItem("mode") === "light") {
+        var btntochange = document.getElementById('btn-search');
+        btntochange.className = "buscarfocused";
+        document.getElementById("lupa").src = "assets/lupa.svg"
+        var texttochange = document.getElementById('findtext');
+        texttochange.className = "buscartext";
+        }
+        else {
+            var btntochange = document.getElementById('btn-search');
+            btntochange.className = "buscarfocused";
+            document.getElementById("lupa").src = "assets/lupa_light.svg"
+            var texttochange = document.getElementById('findtext');
+            texttochange.className = "buscartext";
+        }
+    }
+
+
+    userinput.addEventListener("focusout", function changeback() {
           if (sessionStorage.getItem("mode") === "light") {
         var btntochange = document.getElementById('btn-search');
         btntochange.className = "buscar";
@@ -177,7 +197,9 @@
             var texttochange = document.getElementById('findtext');
             texttochange.className = "find";
         }
-    }
+    })
+
+
 
     document.getElementById('userSearch').onclick = function showdiv() {
         document.getElementById('extend').style.display = "flex";
@@ -200,9 +222,11 @@
 
 function getSearchResultsValues() {
 
+    let firsttohide = document.getElementById("suggestedpics");
+    firsttohide.style.display = "none";
     document.getElementById("gifTendencias").innerHTML = '';
     document.getElementById("tendenciastitle").innerHTML = "Resultados";
-
+    
     fetch('https://api.giphy.com/v1/gifs/search?api_key=pMoUhdb6YnPWGVLjL2eSH0j3IlnPzhGH&q=' + n + '&limit=24&offset=0&rating=G&lang=en')
         .then(response => {
           return response.json();
@@ -269,15 +293,20 @@ return error
 
     function valueSearch(searchValue) {
 
+        let firsttohide = document.getElementById("suggestedpics");
+        firsttohide.style.display = "none";
+
+        let firsttoshow = document.getElementById("suggestedtags");
+        firsttoshow.style.display = "flex";
+
         let sectiontohide = document.getElementById("gifTendencias");
             sectiontohide.style.display = "none";
 
+            var str = document.getElementById("tendenciastitle").innerHTML; 
+                            var res = str.replace("Tendencias", "Resultados");
+                            document.getElementById("tendenciastitle").innerHTML = res;
+
         let searchSection = document.getElementById("results");
-
-        var str = document.getElementById("tendenciastitle").innerHTML; 
-        var res = str.replace("Tendencias", "Resultados");
-        document.getElementById("tendenciastitle").innerHTML = res;
-
 
             searchValue = document.getElementById('userSearch').value;
              console.log(searchValue);
@@ -298,6 +327,10 @@ return error
                     json.data.forEach (item => {
 
                     var gifurl = item.images.original.url;
+                    var bottomp = item.title;
+                    console.log(bottomp);
+                    var arraytitles = bottomp.split(" ", 3);
+                    console.log(arraytitles);
 
                     const segundabox = document.createElement('div');
                     searchSection.appendChild(segundabox);

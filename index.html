@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal</title>
     <link id="styles" rel="stylesheet" href="styles/main.css">
+    <script src="script/script.Js" async></script>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
 </head>
 
@@ -19,21 +20,20 @@
         <section class="topbar">
             <img id="logo" src="assets/gifOF_logo.png" alt="GuifOs logo">
             <span class="botones"><a href="captura.html" class="crear" >Crear Guifos</a>
-                <div class="tema"><button class="elegir" onclick="showmenu();">Elegir tema</button><button class="dropdown" onclick="showmenu();"><img
+                <span class="tema"><button class="elegir" onclick="showmenu();">Elegir tema</button>
+                    <button class="dropdown" onclick="showmenu();"><img
                             src="assets/dropdown.svg" alt="dropdown button"></button>
-                            <div class="options" id="coloroptions">
+                            <span class="options" id="coloroptions">
                                 <button id="sailorday" onclick="lightMode();">Sailor Day</button>
                                 <button id="sailornight" onclick="darkMode();">Sailor Night</button>
-                            </div>
-                            </div>
+                            </span>
+                        </span>
                 <a href="captura.html" class="misGuifos"><u>M</u>is Guifos</a></span>
         </section>
         <section class="searchbar" id="mysearch">
             <div class="barTitle">Buscar</div>
-            <input id="userSearch" onfocus="changebutton();" onfocusout="changeback();"
-            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"></input>
-            <button class="buscar" id="btn-search" onclick="valueSearch();"
-            onmouseover="changebutton();"><span class="buttonDiv">
+            <input id="userSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+            <button class="buscar" id="btn-search" onclick="valueSearch();"><span class="buttonDiv">
                 <img id="lupa" src="assets/lupa_inactive.svg" alt="Lupa inactiva">
                     <span class="find" id="findtext">Buscar</span></span></button>
             <div class="extendedSearchBar" id="extend">
@@ -43,7 +43,7 @@
             </div>
         </section>
 
-        <section class="sugerencias">
+        <section class="sugerencias" id="suggestedpics">
             <div>
                 <p class="hoysugerimos">Hoy te sugerimos:</p>
             </div>
@@ -52,6 +52,11 @@
         </section>
 
         <section class="tendencias">
+            <div class="suggestiontags" id="suggestedtags">
+                <p>#Un ejemplo</p>
+                <p>#Un ejemplo más largo</p>
+                <p>#tags relacionados</p>
+             </div>
             <div>
                 <p class="tendenciasdehoy" id="tendenciastitle">Tendencias:</p>
             </div>
@@ -71,8 +76,9 @@
 
 
     </main>
+
+
 </body>
 
-<script src="script/script.Js"></script>
 
 </html>
