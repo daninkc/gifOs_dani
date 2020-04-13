@@ -937,6 +937,59 @@ line-height: 18px;
     text-decoration: line-through;
 }
 
+.timerandloader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progresscontainer {
+    width: 240px;
+}
+
+#myProgress {
+  width: 100%;
+  background-image: linear-gradient(90deg, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
+background-size: 26.00px 26.00px;
+}
+
+#myProgress2 {
+    width: 100%;
+    background-image: linear-gradient(90deg, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
+  background-size: 26.00px 26.00px;
+  }
+
+#myBar {
+  width: 5%;
+  height: 30px;
+  background-image: linear-gradient(90deg, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
+background-size: 24.00px 24.00px;
+}
+
+#myBar2 {
+    width: 5%;
+    height: 30px;
+    background-image: linear-gradient(90deg, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
+  background-size: 24.00px 24.00px;
+  }
+
+#time {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+width: 124px;
+height: 36px;
+margin-left: 11px;
+margin-top: 0px;
+margin-bottom: 0px;
+margin-right: 24px;
+color: black;
+}
+
 #btn-download {
     background: #110038;
     border: 1px solid #B4B4B4;
